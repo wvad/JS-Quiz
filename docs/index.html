@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A three-question JavaScript Quiz">
+    <meta name="author" content="UNKNOWN">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta property="og:title" content="JS Quiz">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="A three-question JavaScript Quiz">
+    <meta name="theme-color" content="#B1FFD6">
+    <meta property="site_name" content="UNKNOWN">
+    <title>JS-Quiz</title>
+    <style type="text/css">
+      .blank:hover {
+        text-shadow: rgba(183, 183, 183, .8) 0px 0px 3px, rgba(185, 185, 185, .8) 0px 0px 4px !important;
+      }
+      @keyframes blink {
+        0% {
+          text-shadow: none;
+        }
+        50% {
+          text-shadow: rgba(183, 183, 70, .9) 0px 0px 3px, rgba(183, 183, 70, .9) 0px 0px 7px, rgba(185, 185, 70, .9) 0px 0px 10px;
+        }
+        100% {
+          text-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body style="display:none">
+    <div class="question">
+      <h1>Q1</h1>
+      <div style="padding:2px">
+        文字列リテラルの内容を変え、<span data-quote>true</span> と出力されるようにせよ。<br>
+        ただし、2つめと3つめは、同じ内容にすること。
+      </div>
+      <div style="padding:.39em">
+        <div class="source">
+          <span data-reserved>const</span> a = <span data-reserved>new</span>
+          globalThis[<span class="blank-wrap" data-literal>"<span id="blank-1" class="blank">Foo</span>"</span>];<br>
+          <span data-reserved>const</span> b =
+          a[<span class="blank-wrap" data-literal>"<span class="blank blank-2">bar</span>"</span>];<br>a[b] = b;<br>
+          console.<span data-prop>log</span>(b !== a[<span class="blank-wrap" data-literal>"<span class="blank blank-2">bar</span>"</span>]);
+        </div>
+      </div>
+      <div style="overflow:auto hidden;flex-direction:row;padding:.39em;display:flex">
+        <div style="padding:.2em"><div class="run-button">Run</div></div>
+        <div style="flex:1;padding:.2em"><div class="output"></div></div>
+      </div>
+    </div>
+    <div class="question">
+      <h1>Q2</h1>
+      <div style="padding:2px">
+        文字列リテラルの内容を変え、定数 <span data-quote>result</span> が <span data-quote>true</span> となるようにせよ。<br>
+        ただし、15字未満でなければならない。
+      </div>
+      <div style="padding:.39em">
+        <div class="source">
+          <span data-reserved>const</span> s =
+          <span class="blank-wrap" data-literal>"<span id="blank-3" class="blank">BLANK03</span>"</span>;<br>
+          <span data-reserved>const</span> val =
+          s.<span data-prop>split</span>(<span data-regex>/\./</span>).<span data-prop>reduce</span>((a, b) =&gt; a[b], globalThis);<br>
+          <span data-reserved>const</span> result = Object.<span data-prop>isExtensible</span>(val) &amp;&amp; !Object.<span data-prop>setPrototypeOf</span>(val, {});<br>
+          console.<span data-prop>log</span>(result);
+        </div>
+      </div>
+      <div style="overflow:auto hidden;flex-direction:row;padding:.39em;display:flex">
+        <div style="padding:.2em"><div class="run-button">Run</div></div>
+        <div style="flex:1;padding:.2em"><div class="output"></div></div>
+      </div>
+    </div>
+    <div class="question">
+      <h1>Q3</h1>
+      <div style="padding:2px"><span data-quote>BLANK004</span> の部分を15字以内で埋め、<span data-quote>getSourceOfRegex</span> が <span data-quote>failed</span> を返すようにせよ。</div>
+      <div style="padding:.39em">
+        <div class="source">
+          <span data-reserved>const</span> { log } = console, { RegExp } = globalThis;<br>
+          <span data-reserved>const</span> getSource =
+          Function.<span data-prop>prototype</span>.<span data-prop>call</span>.<span data-prop>bind</span>(<br>
+          <span data-indent>  </span>Reflect.<span data-prop>getOwnPropertyDescriptor</span>(RegExp.<span data-prop>prototype</span>,
+          <span data-literal>"source"</span>).<span data-prop>get</span><br>);<br>
+          <span data-reserved>const</span> val =<span class="blank-wrap">
+          <span id="blank-4" class="blank" style="text-decoration:underline">BLANK004</span>;</span><br>
+          <span data-reserved>const</span> getSourceOfRegex = (regex) =&gt; {<br>
+          <span data-indent>  </span><span data-reserved>try</span> {<br>
+          <span data-indent>    </span><span data-reserved>return</span> <span data-literal>"succeeded: "</span> + getSource(regex);<br>
+          <span data-indent>  </span>} <span data-reserved>catch</span> {<br>
+          <span data-indent>    </span><span data-reserved>return</span> <span data-literal>"failed"</span>;<br>
+          <span data-indent>  </span>}<br>};<br>log(getSourceOfRegex(RegExp(val)));
+        </div>
+      </div>
+      <div style="overflow:auto hidden;flex-direction:row;padding:.39em;display:flex">
+        <div style="padding:.2em"><div class="run-button">Run</div></div>
+        <div style="flex:1;padding:.2em"><div class="output"></div></div>
+      </div>
+    </div>
+    <script src="script.js" type="module" defer></script>
+  </body>
+</html>

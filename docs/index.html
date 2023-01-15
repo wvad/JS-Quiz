@@ -60,9 +60,9 @@
           <span data-reserved>const</span> s =
           <span class="blank-wrap" data-literal>"<span id="blank-3" class="blank">BLANK03</span>"</span>;<br>
           <span data-reserved>const</span> val =
-          s.<span data-prop>split</span>(<span data-regex>/\./</span>).<span data-prop>reduce</span>((a, b) =&gt; a?.[b], globalThis);<br>
+          s.<span data-prop>split</span>(<span data-literal-2>/\./</span>).<span data-prop>reduce</span>((a, b) =&gt; a?.[b], globalThis);<br>
           <span data-reserved>const</span> result = Object.<span data-prop>isExtensible</span>(val) &amp;&amp;
-          !Reflect.<span data-prop>setPrototypeOf</span>(val, {}) &amp;&amp; `${val}` == {};<br>
+          !Reflect.<span data-prop>setPrototypeOf</span>(val, {}) &amp;&amp; <span data-literal-2>`${</span>val<span data-literal-2>}`</span> == {};<br>
           console.<span data-prop>log</span>(result);
         </div>
       </div>

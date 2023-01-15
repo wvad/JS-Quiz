@@ -60,7 +60,7 @@
           <span data-reserved>const</span> s =
           <span class="blank-wrap" data-literal>"<span id="blank-3" class="blank">BLANK03</span>"</span>;<br>
           <span data-reserved>const</span> toString =
-          Set.<span data-prop>call</span>.<span data-prop>bind</span>({}.<span data-prop>toString</span>);<br>
+          Date.<span data-prop>call</span>.<span data-prop>bind</span>({}.<span data-prop>toString</span>);<br>
           <span data-reserved>const</span> val =
           s.<span data-prop>split</span>(<span data-regex>/\./</span>).<span data-prop>reduce</span>((a, b) =&gt; a?.[b], globalThis);<br>
           <span data-reserved>const</span> result = Object.<span data-prop>isExtensible</span>(val) &amp;&amp; !Reflect.<span data-prop>setPrototypeOf</span>(val, {})
@@ -80,8 +80,8 @@
         <div class="source">
           <span data-reserved>const</span> { log } = console, { RegExp } = globalThis;<br>
           <span data-reserved>const</span> getSource =
-          Function.<span data-prop>prototype</span>.<span data-prop>call</span>.<span data-prop>bind</span>(<br>
-          <span data-indent>  </span>Reflect.<span data-prop>getOwnPropertyDescriptor</span>(RegExp.<span data-prop>prototype</span>,
+          Date.<span data-prop>call</span>.<span data-prop>bind</span>(<br>
+          <span data-indent>  </span>Object.<span data-prop>getOwnPropertyDescriptor</span>(RegExp.<span data-prop>prototype</span>,
           <span data-literal>"source"</span>).<span data-prop>get</span><br>);<br>
           <span data-reserved>const</span> val =<span class="blank-wrap">
           <span id="blank-4" class="blank" style="text-decoration:underline">BLANK004</span>;</span><br>

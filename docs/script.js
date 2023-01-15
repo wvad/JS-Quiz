@@ -349,7 +349,7 @@ blank4.addEventListener("beforeinput", async e => {
   delete e.dataset.reserved;
 });
 
-[...document.querySelectorAll("span[data-regex]")].forEach(e => {
+[...document.querySelectorAll("span[data-literal-2]")].forEach(e => {
   e.style.color = "#bea5fe";
   delete e.dataset.regex;
 });

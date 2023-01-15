@@ -63,8 +63,8 @@
           Set.<span data-prop>call</span>.<span data-prop>bind</span>({}.<span data-prop>toString</span>);<br>
           <span data-reserved>const</span> val =
           s.<span data-prop>split</span>(<span data-regex>/\./</span>).<span data-prop>reduce</span>((a, b) =&gt; a?.[b], globalThis);<br>
-          <span data-reserved>const</span> result = Object.<span data-prop>isExtensible</span>(val) &amp;&amp; !Reflect.<span data-prop>setPrototypeOf</span>(val, {});
-          &amp;&amp; toString(val) === toString({})<br>
+          <span data-reserved>const</span> result = Object.<span data-prop>isExtensible</span>(val) &amp;&amp; !Reflect.<span data-prop>setPrototypeOf</span>(val, {})
+          &amp;&amp; toString(val) === toString({});<br>
           console.<span data-prop>log</span>(result);
         </div>
       </div>

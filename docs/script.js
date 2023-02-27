@@ -21,7 +21,10 @@ function innerExecutor() {
     [dateToNumber, "Date"],
     [isDotAll, "RegExp"]
   ];
-  types.forEach(type => Reflect.setPrototypeOf(type, null));
+  types.forEach(type => {
+    Reflect.setPrototypeOf(type[0], null);
+    Reflect.setPrototypeOf(type, null);
+  });
   Reflect.setPrototypeOf(types, null);
   const toString = (v) => {
     switch (typeof v) {

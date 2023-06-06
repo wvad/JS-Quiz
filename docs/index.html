@@ -62,7 +62,7 @@
           <span data-reserved>const</span> val =
           s.<span data-prop>split</span>(<span data-literal-2>/\./</span>).<span data-prop>reduce</span>((a, b) =&gt; a?.[b], globalThis);<br>
           <span data-reserved>const</span> result = Object.<span data-prop>isExtensible</span>(val) &amp;&amp;
-          !Reflect.<span data-prop>setPrototypeOf</span>(val, {}) &amp;&amp; <span data-literal-2>`${</span>val<span data-literal-2>}`</span> == {};<br>
+          !Reflect.<span data-prop>setPrototypeOf</span>(val, {});<br>
           console.<span data-prop>log</span>(result);
         </div>
       </div>

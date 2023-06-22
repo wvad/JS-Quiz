@@ -57,7 +57,8 @@
       </div>
       <div style="padding:.39em">
         <div class="source">
-          const cap = str => str[0].toUpperCase() + str.slice(1);
+          <span data-reserved>const</span> cap = str =>
+          str[0].<span data-prop>toUpperCase</span>() + str.<span data-prop>slice</span>(1);<br>
           <span data-reserved>const</span> s =
           <span class="blank-wrap" data-literal>"<span id="blank-3" class="blank">BLANK03</span>"</span>;<br>
           <span data-reserved>const</span> val =

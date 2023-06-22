@@ -137,6 +137,7 @@ const execute = async (source) => {
   runButtonStyle.background = "#747479";
   runButtonStyle.fontFamily = "Sans-Serif";
   runButtonStyle.fontWeight = "bold";
+  runButtonStyle.userSelect = "none";
   runButton.classList.remove("run-button");
   runButton.addEventListener("click", async () => {
     output.textContent = (await execute(source.innerText)).trim();

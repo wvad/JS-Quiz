@@ -38,7 +38,7 @@
       <div style="padding:.39em">
         <div class="source">
           <span data-reserved>const</span> a = <span data-reserved>new</span>
-          globalThis[<span class="blank-wrap" data-literal>"<span id="blank-1" class="blank">Foo</span>"</span>];<br>
+          ((0, eval)("this"))[<span class="blank-wrap" data-literal>"<span id="blank-1" class="blank">Foo</span>"</span>];<br>
           <span data-reserved>const</span> b =
           a[<span class="blank-wrap" data-literal>"<span class="blank blank-2">bar</span>"</span>];<br>a[b] = b;<br>
           console.<span data-prop>log</span>(b !== a[<span class="blank-wrap" data-literal>"<span class="blank blank-2">bar</span>"</span>]);
@@ -82,7 +82,7 @@
         <div class="source">
           <span data-reserved>const</span> { log } = console, createRegExp = RegExp;<br>
           <span data-reserved>const</span> getSource =
-          Date.<span data-prop>call</span>.<span data-prop>bind</span>(<br>
+          Set.<span data-prop>call</span>.<span data-prop>bind</span>(<br>
           <span data-indent>  </span>Object.<span data-prop>getOwnPropertyDescriptor</span>(RegExp.<span data-prop>prototype</span>,
           <span data-literal>"source"</span>).<span data-prop>get</span><br>);<br>
           <span data-reserved>const</span> val =<span class="blank-wrap">

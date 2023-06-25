@@ -63,7 +63,7 @@
           <span data-reserved>const</span> s =
           <span class="blank-wrap" data-literal>"<span id="blank-3" class="blank">BLANK03</span>"</span>;<br>
           <span data-reserved>const</span> val =
-          s.<span data-prop>split</span>(<span data-literal-2>/\./</span>).<span data-prop>reduce</span>((a, b) =&gt; a?.[cap(b)], globalThis);<br>
+          s.<span data-prop>split</span>(<span data-literal-2>/\./</span>).<span data-prop>reduce</span>((a, b) =&gt; a && a[cap(b)], (0, eval)("this");<br>
           <span data-reserved>const</span> result = Object.<span data-prop>isExtensible</span>(val) &amp;&amp;
           !Reflect.<span data-prop>setPrototypeOf</span>(val, {});<br>
           console.<span data-prop>log</span>(result);
@@ -79,7 +79,7 @@
       <div style="padding:2px"><span data-quote>BLANK004</span> の部分を15字以内で埋め、<span data-quote>getSourceOfRegex</span> が <span data-quote>failed</span> を返すようにせよ。</div>
       <div style="padding:.39em">
         <div class="source">
-          <span data-reserved>const</span> { log } = console, { RegExp } = globalThis;<br>
+          <span data-reserved>const</span> { log } = console, createRegExp = RegExp;<br>
           <span data-reserved>const</span> getSource =
           Date.<span data-prop>call</span>.<span data-prop>bind</span>(<br>
           <span data-indent>  </span>Object.<span data-prop>getOwnPropertyDescriptor</span>(RegExp.<span data-prop>prototype</span>,
@@ -91,7 +91,7 @@
           <span data-indent>    </span><span data-reserved>return</span> <span data-literal>"succeeded: "</span> + getSource(regex);<br>
           <span data-indent>  </span>} <span data-reserved>catch</span> {<br>
           <span data-indent>    </span><span data-reserved>return</span> <span data-literal>"failed"</span>;<br>
-          <span data-indent>  </span>}<br>};<br>log(getSourceOfRegex(RegExp(val)));
+          <span data-indent>  </span>}<br>};<br>log(getSourceOfRegex(createRegExp(val)));
         </div>
       </div>
       <div style="overflow:auto hidden;flex-direction:row;padding:.39em;display:flex">

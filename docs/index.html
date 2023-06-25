@@ -64,7 +64,7 @@
           <span class="blank-wrap" data-literal>"<span id="blank-3" class="blank">BLANK03</span>"</span>;<br>
           <span data-reserved>const</span> val =
           s.<span data-prop>split</span>(<span data-literal-2>/\./</span>).<span data-prop>reduce</span>((a,
-          b) =&gt; a && a[cap(b)], (0, eval)(<span data-literal>"eval"</span>));<br>
+          b) =&gt; a && a[cap(b)], (<span data-literal>0</span>, eval)(<span data-literal>"eval"</span>));<br>
           <span data-reserved>const</span> result = Object.<span data-prop>isExtensible</span>(val) &amp;&amp;
           !Reflect.<span data-prop>setPrototypeOf</span>(val, {});<br>
           console.<span data-prop>log</span>(result);

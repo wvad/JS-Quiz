@@ -90,7 +90,7 @@
           <span data-reserved>const</span> getSourceOfRegex = regex =&gt; {<br>
           <span data-indent>  </span><span data-reserved>try</span> {<br>
           <span data-indent>    </span><span data-reserved>return</span> <span data-literal>"succeeded: "</span> + getSource(regex);<br>
-          <span data-indent>  </span>} <span data-reserved>catch</span> {<br>
+          <span data-indent>  </span>} <span data-reserved>catch</span>(_) {<br>
           <span data-indent>    </span><span data-reserved>return</span> <span data-literal>"failed"</span>;<br>
           <span data-indent>  </span>}<br>};<br>log(getSourceOfRegex(createRegExp(val)));
         </div>

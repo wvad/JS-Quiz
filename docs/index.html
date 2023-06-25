@@ -64,21 +64,27 @@
       </div>
       <div style="padding:.39em">
         <div class="source">
+          <!--
+          const globalThis = (0, eval)(Set.name[2] + Set.name.match.name[4] + isNaN.name.slice(0, 2));
+          const reducer = (a, b) => a && a[b[0].toUpperCase() + b.slice(1).toLowerCase()];
+          const v = "Math.__proto__".split(/\./).reduce(reducer, globalThis);
+          const result = Object.isExtensible(v) && !Reflect.setPrototypeOf(v, {});
+          console.log(result); 
+          -->
           <span data-reserved>const</span> globalThis = (<span data-literal>0</span>,
           eval)(Set.<span data-prop>name</span>[<span data-literal>2</span>] +
           Set.<span data-prop>name</span>.<span data-prop>match</span>.<span data-prop>name</span>[<span data-literal>4</span>]
           + isNaN.<span data-prop>name</span>.<span data-prop>slice</span>(<span data-literal>0</span>,
           <span data-literal>2</span>));<br>
-          <span data-reserved>const</span> cap = str =>
-          str[<span data-literal>0</span>].<span data-prop>toUpperCase</span>() +
-          str.<span data-prop>slice</span>(<span data-literal>1</span>).<span data-prop>toLowerCase</span>();<br>
+          <span data-reserved>const</span> reducer = (a, b) => a &&
+          a[b[<span data-literal>0</span>].<span data-prop>toUpperCase</span>() +
+          b<span data-prop>slice</span>(<span data-literal>1</span>).<span data-prop>toLowerCase</span>()];<br>
           <span data-reserved>const</span> s =
           <span class="blank-wrap" data-literal>"<span id="blank-3" class="blank">BLANK03</span>"</span>;<br>
-          <span data-reserved>const</span> val =
-          s.<span data-prop>split</span>(<span data-literal-2>/\./</span>).<span data-prop>reduce</span>((a,
-          b) =&gt; a && a[cap(b)], globalThis);<br>
-          <span data-reserved>const</span> result = Object.<span data-prop>isExtensible</span>(val) &amp;&amp;
-          !Reflect.<span data-prop>setPrototypeOf</span>(val, {});<br>
+          <span data-reserved>const</span> value =
+          s.<span data-prop>split</span>(<span data-literal-2>/\./</span>).<span data-prop>reduce</span>((reducer, globalThis);<br>
+          <span data-reserved>const</span> result = Object.<span data-prop>isExtensible</span>(value) &amp;&amp;
+          !Reflect.<span data-prop>setPrototypeOf</span>(value, {});<br>
           console.<span data-prop>log</span>(result);
         </div>
       </div>

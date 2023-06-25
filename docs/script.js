@@ -392,5 +392,10 @@ bodyStyle.display = "";
 
 body.addEventListener('click', () => {});
 
-const allTextNodes = [body, ...body.querySelectorAll("*")].flatMap(e => [...e.childNodes].filter(e => e.nodeType === Node.TEXT_NODE));
-[...new Set(allTextNodes)].forEach(e => e.data.includes('\n') && e.replaceWith(e.data.replace(/\s+/g, ' ')));
+[body, ...body.querySelectorAll("*")].forEach(
+  element => element.childNodes.forEach(
+    node => node.nodeType === Node.TEXT_NODE && node.data.includes('\n') && node.replaceWith(node.data.replace(/\s+/g, ' '))
+  )
+);
+
+document.head.childNodes.forEach(node => (node.nodeType === Node.TEXT_NODE) && (node.data = ""));

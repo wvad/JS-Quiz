@@ -29,7 +29,7 @@
     </style>
   </head>
   <body>
-    <p>※ ES7(ES2016) または，それ以降の ECMAScript に準拠している実行エンジンで実行するものとする。</p>
+    <p>※ ES2020(ES11) または，それ以降の ECMAScript に準拠していて，かつ，Console API を実装している実行エンジンで実行するものとする。</p>
     <div class="question">
       <h1>Q1</h1>
       <div style="padding:2px">
@@ -38,14 +38,9 @@
       </div>
       <div style="padding:.39em">
         <div class="source">
-          <span data-reserved>const</span> globalObject = (<span data-literal>0</span>,
-          eval)(Set.<span data-prop>name</span>[<span data-literal>2</span>] +
-          Set.<span data-prop>name</span>.<span data-prop>match</span>.<span data-prop>name</span>[<span data-literal>4</span>]
-          + isNaN.<span data-prop>name</span>.<span data-prop>slice</span>(<span data-literal>0</span>,
-          <span data-literal>2</span>));<br>
           <span data-reserved>const</span> a =
           <span data-reserved>new</span>
-          globalObject[<span class="blank-wrap" data-literal>"<span id="blank-1" class="blank">Foo</span>"</span>];<br>
+          globalThis[<span class="blank-wrap" data-literal>"<span id="blank-1" class="blank">Foo</span>"</span>];<br>
           <span data-reserved>const</span> b =
           a[<span class="blank-wrap" data-literal>"<span class="blank blank-2">bar</span>"</span>];<br>a[b] = b;<br>
           console.<span data-prop>log</span>(b !== a[<span class="blank-wrap" data-literal>"<span class="blank blank-2">bar</span>"</span>]);
@@ -64,18 +59,13 @@
       </div>
       <div style="padding:.39em">
         <div class="source">
-          <span data-reserved>const</span> globalObject = (<span data-literal>0</span>,
-          eval)(Set.<span data-prop>name</span>[<span data-literal>2</span>] +
-          Set.<span data-prop>name</span>.<span data-prop>match</span>.<span data-prop>name</span>[<span data-literal>4</span>]
-          + isNaN.<span data-prop>name</span>.<span data-prop>slice</span>(<span data-literal>0</span>,
-          <span data-literal>2</span>));<br>
           <span data-reserved>const</span> reducer = (a, b) => a &&
           a[b[<span data-literal>0</span>].<span data-prop>toUpperCase</span>() +
           b.<span data-prop>slice</span>(<span data-literal>1</span>).<span data-prop>toLowerCase</span>()];<br>
           <span data-reserved>const</span> s =
           <span class="blank-wrap" data-literal>"<span id="blank-3" class="blank">BLANK03</span>"</span>;<br>
           <span data-reserved>const</span> value =
-          s.<span data-prop>split</span>(<span data-literal-2>/\./</span>).<span data-prop>reduce</span>(reducer, globalObject);<br>
+          s.<span data-prop>split</span>(<span data-literal-2>/\./</span>).<span data-prop>reduce</span>(reducer, globalThis);<br>
           <span data-reserved>const</span> result = Object.<span data-prop>isExtensible</span>(value) &amp;&amp;
           !Reflect.<span data-prop>setPrototypeOf</span>(value, {});<br>
           console.<span data-prop>log</span>(result);
